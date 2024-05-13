@@ -1,14 +1,21 @@
-"use client"
-import React from 'react'
+"use client";
+import React from "react";
+import Link from "next/link";
 
-function ButtonWithConsoleLog({userId}) {
+
+
+function ButtonWithConsoleLog({ userId }) {
+
   return (
-   <button onClick={()=>{
-    console.log(userId)
-   }}>
-    Visitar Perfil
+    <button
+      onClick={async () => {
+        console.log("aaaaa");
+
+      }}
+    >
+      <Link href={`/users/${userId}`}>Visitar Perfil</Link>
     </button>
-  )
+  );
 }
 
-export default ButtonWithConsoleLog
+export default ButtonWithConsoleLog;
